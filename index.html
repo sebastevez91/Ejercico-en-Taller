@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio en clase</title>
+</head>
+<body>
+    <label for="idMateria1">Materia 1</label>
+    <input id="idMateria1" type="number">
+    <label for="idMateria2">Materia 2</label>
+    <input id="idMateria2" type="number">
+    <button type="button" onclick="validaMateria()">Validar</button>
+    <script>
+        function validaMateria(){
+            let materiaUno = parseInt(document.getElementById("idMateria1").value);
+            let materiaDos = parseInt(document.getElementById("idMateria2").value);
+
+            if(materiaUno > materiaDos){
+                alert("La materia uno tiene más estudiantes")
+            }else if(materiaDos > materiaUno){
+                alert("La materia dos tiene más estudiantes")
+            }else{
+                alert("Las materias tienen la misma cantidad de estudiates")
+            }
+        }
+    </script>
+</body>
+</html>
