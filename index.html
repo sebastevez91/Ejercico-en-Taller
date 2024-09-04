@@ -11,21 +11,23 @@
     <label for="idMateria2">Materia 2</label>
     <input id="idMateria2" type="number">
     <button type="button" onclick="validaMateria()">Validar</button>
+    <p id="idResult"></p>
     <script>
         function validaMateria(){
             let materiaUno = parseInt(document.getElementById("idMateria1").value);
             let materiaDos = parseInt(document.getElementById("idMateria2").value);
+            let resultado = document.getElementById("idResult");
             if(materiaUno < 0 || materiaDos < 0 ){
-                alert("Los uno o los dos números ingresados no son válidos")
+                resultado.textContent = "Los uno o los dos números ingresados no son válidos";
             }else if(materiaUno < 101 || materiaDos < 101){
-                alert("El número ingresado es mayor a la cantidad permitida")
+                alresultado.textContent = "El número ingresado es mayor a la cantidad permitida";
             }else{
                 if(materiaUno > materiaDos){
-                alert("La materia uno tiene más estudiantes")
+                    resultado.textContent = "La materia uno tiene más estudiantes";
                 }else if(materiaDos > materiaUno){
-                    alert("La materia dos tiene más estudiantes")
+                    resultado.textContent = "La materia dos tiene más estudiantes";
                 }else{
-                    alert("Las materias tienen la misma cantidad de estudiates")
+                    resultado.textContent = "Las materias tienen la misma cantidad de estudiates";
                 }
             }
         }
