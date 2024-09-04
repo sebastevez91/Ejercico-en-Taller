@@ -15,13 +15,18 @@
         function validaMateria(){
             let materiaUno = parseInt(document.getElementById("idMateria1").value);
             let materiaDos = parseInt(document.getElementById("idMateria2").value);
-
-            if(materiaUno > materiaDos){
-                alert("La materia uno tiene más estudiantes")
-            }else if(materiaDos > materiaUno){
-                alert("La materia dos tiene más estudiantes")
+            if(materiaUno < 0 || materiaDos < 0 ){
+                alert("Los uno o los dos números ingresados no son válidos")
+            }else if(materiaUno < 101 || materiaDos < 101){
+                alert("El número ingresado es mayor a la cantidad permitida")
             }else{
-                alert("Las materias tienen la misma cantidad de estudiates")
+                if(materiaUno > materiaDos){
+                alert("La materia uno tiene más estudiantes")
+                }else if(materiaDos > materiaUno){
+                    alert("La materia dos tiene más estudiantes")
+                }else{
+                    alert("Las materias tienen la misma cantidad de estudiates")
+                }
             }
         }
     </script>
